@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Level 1-1</title>
+    <style>
+            main {
+        padding: 10px;
+        padding-bottom: 60px;
+        /* Height of the footer */
+      }
+      footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        /* Height of the footer */
+        background: #6cf;
+      }
+
+      .footer-wrapper {
+        font-weight: 400;
+        text-align: center;
+        line-height: 60px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="root"></div>
+
+    <!-- Load React and Babel libraries first -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Your JSX script MUST come after Babel and use type="text/babel" -->
+    <script type="text/babel">
+      const rootElement = document.querySelector('.root');
+
+      const myName = (
+        <h1>
+          {' '}
+          Baba Kouadio Fabrice
+        </h1>
+      )
+
+      const user = (
+        <div>
+        <h1>
+          Baba Kouadio Fabrice
+        </h1>
+        <p>Lithuania</p>
+        <p> Sr. Pediatrician</p>
+        <p> Gender fluid</p>
+        <p> babaKouFa@gov.li</p>
+        <p> +370 600 00000</p>
+      </div>
+      )
+
+      const mainStyle = {
+        border: '24px solid green',
+        backgroundColor: '#B56B34',
+        fontFamily: 'Arial',
+        padding: 20,
+      }
+// JSX element
+const main = (
+  <main style = {mainStyle}>
+    <div className = 'main-wrapper'>
+      {myName}
+      {user}
+  </div>
+  </main>
+)
+
+const footer = (
+  <footer>
+    <div className = 'footer-wrapper'>
+      <p>30 Days of React Challenge</p>
+      <p>Feb 25, 2023</p>
+      <p>By Baba Kouadio Fabrice</p>
+    </div>
+  </footer>
+)
+
+const app = (
+  <div className="app">
+    {main}
+    {footer}
+  </div>)
+
+
+      ReactDOM.render(app, rootElement);
+    </script>
+  </body>
+</html>
